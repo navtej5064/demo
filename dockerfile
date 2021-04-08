@@ -8,6 +8,7 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page265/sh
 WORKDIR /var/www/html
 RUN unzip shine.zip
 RUN cp -rvf shine/* .
-RUN rm -rf shine shine.zip
+RUN rm -rf shine
+RUN rm -rf shine.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
