@@ -8,5 +8,4 @@ WORKDIR /var/www/html
 RUN unzip active.zip
 RUN cp -rvf active/* .
 RUN rm -rf active active.zip
-CMD ["/usr/sbin/httpd", "-p", "FOREGROUND"]
 EXPOSE 80
